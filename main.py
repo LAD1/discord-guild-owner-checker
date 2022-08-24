@@ -6,7 +6,7 @@ with open("tkns.txt", "r+") as f:
 
 for line in lines:
     token = line.strip()
-    headers = {'Authorization': token,}
+    headers = {'Authorization': token}
     try:
         r = httpx.get('https://discord.com/api/v9/users/@me/guilds?with_counts=true', headers=headers)
         print("Running on token: " + token)
